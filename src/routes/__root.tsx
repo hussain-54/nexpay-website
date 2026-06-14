@@ -86,10 +86,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "NexPay — The Global Stablecoin Payment Network" },
       { name: "twitter:description", content: "Send money anywhere. Settle instantly. No banks. No borders. No delays. NexPay is a blockchain-native stablecoin payment network across 150+ countries." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adb9c9d2-ce1b-4b7c-8f34-f33657a44923/id-preview-eac915a8--b2d78581-3ea1-432b-855f-2ed7b9261a73.lovable.app-1781434693635.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/adb9c9d2-ce1b-4b7c-8f34-f33657a44923/id-preview-eac915a8--b2d78581-3ea1-432b-855f-2ed7b9261a73.lovable.app-1781434693635.png" },
+      { property: "og:image", content: "/og-image.png" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [
+      { rel: "icon", type: "image/svg+xml", href: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2302C39A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M4 20V4l16 16V4'/></svg>" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" },
