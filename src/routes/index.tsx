@@ -61,16 +61,16 @@ function Navbar() {
     >
       <div className="container-x flex h-16 items-center justify-between">
         <Logo light />
-        <nav className="hidden lg:flex items-center gap-7 text-sm text-white/70">
+        <nav className="hidden lg:flex items-center gap-7 text-base font-medium text-white/90">
           {links.map(([label, href]) => (
             <a key={href} href={href} className="hover:text-white transition-colors">{label}</a>
           ))}
         </nav>
         <div className="hidden lg:flex items-center gap-2">
-          <a href="#contact" className="px-4 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white border border-white/15 hover:border-white/30 transition-colors">
+          <a href="#contact" className="px-4 py-2 rounded-lg text-sm font-semibold text-white hover:text-white border border-white/15 hover:border-white/30 transition-colors">
             View Whitepaper
           </a>
-          <a href="#contact" className="px-4 py-2 rounded-lg text-sm font-semibold bg-mint text-midnight-deep hover:bg-mint-glow transition-colors inline-flex items-center gap-1.5">
+          <a href="#contact" className="px-4 py-2 rounded-lg text-sm font-bold bg-mint text-midnight-deep hover:bg-mint-glow transition-colors inline-flex items-center gap-1.5">
             Request a Demo <ArrowRight className="h-4 w-4" />
           </a>
         </div>
@@ -82,11 +82,11 @@ function Navbar() {
         <div className="lg:hidden bg-midnight-deep/95 backdrop-blur-xl border-t border-white/10">
           <div className="container-x py-4 flex flex-col gap-3">
             {links.map(([label, href]) => (
-              <a key={href} href={href} onClick={() => setOpen(false)} className="text-white/80 hover:text-white py-1.5">{label}</a>
+              <a key={href} href={href} onClick={() => setOpen(false)} className="text-white font-medium text-base py-1.5">{label}</a>
             ))}
             <div className="flex flex-col gap-2 pt-3 border-t border-white/10">
-              <a href="#contact" onClick={() => setOpen(false)} className="px-4 py-2 rounded-lg text-sm text-center text-white border border-white/20">View Whitepaper</a>
-              <a href="#contact" onClick={() => setOpen(false)} className="px-4 py-2 rounded-lg text-sm text-center font-semibold bg-mint text-midnight-deep">Request a Demo</a>
+              <a href="#contact" onClick={() => setOpen(false)} className="px-4 py-2 rounded-lg text-sm font-semibold text-center text-white border border-white/20">View Whitepaper</a>
+              <a href="#contact" onClick={() => setOpen(false)} className="px-4 py-2 rounded-lg text-sm text-center font-bold bg-mint text-midnight-deep">Request a Demo</a>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ function Navbar() {
 
 function SectionEyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-mint/10 text-[color:var(--mint)] border border-[color-mix(in_oklab,var(--mint)_30%,transparent)]">
+    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold bg-mint/10 text-[color:var(--mint)] border border-[color-mix(in_oklab,var(--mint)_30%,transparent)]">
       <span className="h-1.5 w-1.5 rounded-full bg-mint" /> {children}
     </span>
   );
@@ -113,14 +113,14 @@ function Hero() {
           <h1 className="mt-6 text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.02]">
             The Global <span className="text-gradient-mint">Stablecoin</span> Payment Network
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
+          <p className="mt-6 text-lg md:text-xl text-white/85 max-w-2xl leading-relaxed">
             Send money anywhere. Settle instantly. No banks. No borders. No delays.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
-            <a href="#contact" className="px-6 py-3.5 rounded-xl font-semibold bg-mint text-midnight-deep hover:bg-mint-glow transition-colors inline-flex items-center gap-2 shadow-[0_10px_40px_-10px_var(--mint)]">
+            <a href="#contact" className="px-6 py-3.5 rounded-xl font-bold bg-mint text-midnight-deep hover:bg-mint-glow transition-colors inline-flex items-center gap-2 shadow-[0_10px_40px_-10px_var(--mint)]">
               Request a Demo <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="#contact" className="px-6 py-3.5 rounded-xl font-semibold text-white border border-white/20 hover:bg-white/5 transition-colors">
+            <a href="#contact" className="px-6 py-3.5 rounded-xl font-bold text-white border border-white/30 hover:bg-white/5 transition-colors">
               View Whitepaper
             </a>
           </div>
@@ -134,14 +134,14 @@ function Hero() {
           ].map((s) => (
             <div key={s.l} className="rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-6 md:p-8">
               <div className="text-5xl md:text-6xl font-extrabold text-gradient-mint tracking-tight">{s.k}</div>
-              <div className="mt-2 text-sm uppercase tracking-widest text-white/60">{s.l}</div>
+              <div className="mt-2 text-base font-semibold uppercase tracking-widest text-white/80">{s.l}</div>
             </div>
           ))}
         </div>
 
-        <p className="mt-14 text-sm text-white/50 reveal">
-          Founded by <span className="text-white/80 font-medium">Saith Asfand Yar</span> (CEO) &{" "}
-          <span className="text-white/80 font-medium">Hussain Ahmad Durrani</span> (Head of Technology)
+        <p className="mt-14 text-base text-white/70 reveal">
+          Founded by <span className="text-white font-semibold">Saith Asfand Yar</span> (CEO) &{" "}
+          <span className="text-white font-semibold">Hussain Ahmad Durrani</span> (Head of Technology)
         </p>
       </div>
     </section>
@@ -169,7 +169,7 @@ function Problem() {
           <h2 className="mt-5 text-4xl md:text-6xl font-extrabold tracking-tight">
             Global payments are <span className="text-[color:var(--mint)]">broken.</span>
           </h2>
-          <p className="mt-5 text-lg text-muted-foreground">
+          <p className="mt-5 text-lg md:text-xl text-muted-foreground">
             $150T+ moves across borders each year, yet the system remains slow, expensive, and opaque.
           </p>
         </div>
@@ -178,7 +178,7 @@ function Problem() {
           {stats.map((s) => (
             <div key={s.l} className="card-elevated p-6">
               <div className="text-3xl md:text-4xl font-extrabold tracking-tight text-primary">{s.k}</div>
-              <div className="mt-2 text-sm text-muted-foreground leading-snug">{s.l}</div>
+              <div className="mt-2 text-base font-medium text-foreground/80 leading-snug">{s.l}</div>
             </div>
           ))}
         </div>
@@ -189,8 +189,8 @@ function Problem() {
               <div className="h-11 w-11 grid place-items-center rounded-xl bg-primary/5 text-primary">
                 <p.icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 text-lg font-semibold">{p.t}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.d}</p>
+              <h3 className="mt-5 text-lg font-bold">{p.t}</h3>
+              <p className="mt-2 text-base text-foreground/75 leading-relaxed">{p.d}</p>
             </div>
           ))}
         </div>
@@ -213,7 +213,7 @@ function Solution() {
           <h2 className="mt-5 text-4xl md:text-6xl font-extrabold tracking-tight">
             Introducing <span className="text-gradient-mint">NexPay</span>
           </h2>
-          <p className="mt-5 text-lg text-muted-foreground">
+          <p className="mt-5 text-lg md:text-xl text-muted-foreground">
             A blockchain-native stablecoin payment network enabling instant, fee-minimal, borderless value transfer for individuals, businesses, and financial institutions across 150+ countries.
           </p>
         </div>
@@ -225,7 +225,7 @@ function Solution() {
                 <f.icon className="h-5 w-5" />
               </div>
               <h3 className="mt-6 text-xl font-bold">{f.t}</h3>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{f.d}</p>
+              <p className="mt-3 text-base text-foreground/75 leading-relaxed">{f.d}</p>
             </div>
           ))}
         </div>
@@ -247,7 +247,7 @@ function HowItWorks() {
         <div className="max-w-3xl reveal">
           <SectionEyebrow>Product Architecture</SectionEyebrow>
           <h2 className="mt-5 text-4xl md:text-6xl font-extrabold tracking-tight">How It Works</h2>
-          <p className="mt-5 text-lg text-muted-foreground">
+          <p className="mt-5 text-lg md:text-xl text-muted-foreground">
             A three-layer architecture powering seamless global value transfer.
           </p>
         </div>
@@ -259,20 +259,20 @@ function HowItWorks() {
               <div key={s.n} className="relative reveal">
                 <div className="card-elevated card-elevated-hover p-6 h-full">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-semibold text-[color:var(--mint)]">STEP {s.n}</span>
+                    <span className="text-sm font-bold text-[color:var(--mint)]">STEP {s.n}</span>
                     <div className="h-10 w-10 grid place-items-center rounded-xl bg-primary text-primary-foreground">
                       <s.icon className="h-4 w-4" />
                     </div>
                   </div>
                   <h3 className="mt-5 text-lg font-bold">{s.t}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
+                  <p className="mt-2 text-base text-foreground/75 leading-relaxed">{s.d}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <p className="mt-12 text-center text-sm text-muted-foreground reveal">
+        <p className="mt-12 text-center text-base font-medium text-foreground/80 reveal">
           Powered by stablecoin infrastructure · Near-zero fees · Instant finality · No correspondent banks
         </p>
       </div>
@@ -305,9 +305,9 @@ function Markets() {
         <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5">
           {tam.map((t) => (
             <div key={t.l} className="card-elevated p-8 reveal">
-              <div className="text-xs font-mono font-semibold text-[color:var(--mint)] uppercase tracking-widest">{t.l}</div>
+              <div className="text-sm font-bold text-[color:var(--mint)] uppercase tracking-widest">{t.l}</div>
               <div className="mt-3 text-6xl md:text-7xl font-extrabold tracking-tight text-primary">{t.k}</div>
-              <div className="mt-3 text-sm text-muted-foreground">{t.d}</div>
+              <div className="mt-3 text-base font-medium text-foreground/80">{t.d}</div>
             </div>
           ))}
         </div>
@@ -321,7 +321,7 @@ function Markets() {
             {drivers.map((d) => (
               <div key={d} className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-[color:var(--mint)] shrink-0 mt-0.5" />
-                <p className="text-sm text-foreground/80 leading-relaxed">{d}</p>
+                <p className="text-base text-foreground/85 leading-relaxed">{d}</p>
               </div>
             ))}
           </div>
@@ -346,34 +346,34 @@ function WhyNexPay() {
         <div className="max-w-3xl reveal">
           <SectionEyebrow>Competitive Advantage</SectionEyebrow>
           <h2 className="mt-5 text-4xl md:text-6xl font-extrabold tracking-tight">Why NexPay</h2>
-          <p className="mt-5 text-lg text-muted-foreground">
+          <p className="mt-5 text-lg md:text-xl text-muted-foreground">
             The universal stablecoin rails faster, cheaper, and broader than every legacy or crypto alternative.
           </p>
         </div>
 
         <div className="mt-12 card-elevated overflow-hidden reveal">
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm min-w-[640px]">
+            <table className="w-full text-left text-base min-w-[640px]">
               <thead className="bg-secondary">
                 <tr>
-                  <th className="px-6 py-4 font-semibold text-foreground">Provider</th>
-                  <th className="px-6 py-4 font-semibold text-foreground">Settlement</th>
-                  <th className="px-6 py-4 font-semibold text-foreground">Fee</th>
-                  <th className="px-6 py-4 font-semibold text-foreground">Coverage</th>
+                  <th className="px-6 py-4 font-bold text-foreground">Provider</th>
+                  <th className="px-6 py-4 font-bold text-foreground">Settlement</th>
+                  <th className="px-6 py-4 font-bold text-foreground">Fee</th>
+                  <th className="px-6 py-4 font-bold text-foreground">Coverage</th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((r) => (
                   <tr key={r.name} className={`border-t border-border ${r.highlight ? "bg-[color-mix(in_oklab,var(--mint)_8%,transparent)]" : ""}`}>
-                    <td className="px-6 py-4 font-semibold">
+                    <td className="px-6 py-4 font-bold">
                       <span className={r.highlight ? "text-[color:var(--mint)] inline-flex items-center gap-2" : ""}>
                         {r.name}
                         {r.highlight && <BadgeCheck className="h-4 w-4" />}
                       </span>
                     </td>
-                    <td className="px-6 py-4 text-muted-foreground">{r.settlement}</td>
-                    <td className="px-6 py-4 text-muted-foreground">{r.fee}</td>
-                    <td className="px-6 py-4 text-muted-foreground">{r.coverage}</td>
+                    <td className="px-6 py-4 font-medium text-foreground/80">{r.settlement}</td>
+                    <td className="px-6 py-4 font-medium text-foreground/80">{r.fee}</td>
+                    <td className="px-6 py-4 font-medium text-foreground/80">{r.coverage}</td>
                   </tr>
                 ))}
               </tbody>
@@ -396,7 +396,7 @@ function Achievements() {
         <div className="max-w-3xl reveal">
           <SectionEyebrow>Traction</SectionEyebrow>
           <h2 className="mt-5 text-4xl md:text-6xl font-extrabold tracking-tight">Validation & Recognition</h2>
-          <p className="mt-5 text-lg text-muted-foreground">
+          <p className="mt-5 text-lg md:text-xl text-muted-foreground">
             Early proof validated through global competitions, international organisations, and ecosystem recognition.
           </p>
         </div>
@@ -410,7 +410,7 @@ function Achievements() {
                   <i.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-6 text-xl font-bold leading-snug">{i.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{i.desc}</p>
+                <p className="mt-3 text-base text-foreground/75 leading-relaxed">{i.desc}</p>
               </div>
             </div>
           ))}
@@ -435,7 +435,7 @@ function Mission() {
               <Target className="h-5 w-5" />
             </div>
             <h3 className="mt-6 text-2xl font-bold">Mission</h3>
-            <p className="mt-3 text-base text-muted-foreground leading-relaxed">
+            <p className="mt-3 text-lg text-foreground/80 leading-relaxed">
               To make cross-border money movement instant, transparent, and accessible to everyone, eliminating the friction, fees, and delays of legacy financial systems.
             </p>
           </div>
@@ -444,7 +444,7 @@ function Mission() {
               <Compass className="h-5 w-5" />
             </div>
             <h3 className="mt-6 text-2xl font-bold">Vision</h3>
-            <p className="mt-3 text-base text-muted-foreground leading-relaxed">
+            <p className="mt-3 text-lg text-foreground/80 leading-relaxed">
               A world where value moves as freely as information — where 1.4 billion unbanked adults gain access to the global economy through a single, universal stablecoin payment rail.
             </p>
           </div>
@@ -467,7 +467,7 @@ function Team() {
         <div className="max-w-3xl reveal">
           <SectionEyebrow>The Builders</SectionEyebrow>
           <h2 className="mt-5 text-4xl md:text-6xl font-extrabold tracking-tight">Built by operators.</h2>
-          <p className="mt-5 text-lg text-muted-foreground">
+          <p className="mt-5 text-lg md:text-xl text-muted-foreground">
             Global exposure, technical depth, and fintech execution experience.
           </p>
         </div>
@@ -479,8 +479,8 @@ function Team() {
                 {m.initials}
               </div>
               <h3 className="mt-5 text-lg font-bold leading-snug">{m.name}</h3>
-              <p className="text-sm font-medium text-[color:var(--mint)] mt-1">{m.role}</p>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{m.bio}</p>
+              <p className="text-base font-semibold text-[color:var(--mint)] mt-1">{m.role}</p>
+              <p className="mt-3 text-base text-foreground/75 leading-relaxed">{m.bio}</p>
             </div>
           ))}
         </div>
@@ -510,7 +510,7 @@ function BusinessModel() {
                 <s.icon className="h-5 w-5" />
               </div>
               <h3 className="mt-5 text-lg font-bold">{s.t}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
+              <p className="mt-2 text-base text-foreground/75 leading-relaxed">{s.d}</p>
             </div>
           ))}
         </div>
@@ -525,7 +525,7 @@ function FinalCTA() {
       <div className="absolute inset-0 grid-bg pointer-events-none" />
       <div className="container-x relative py-24 md:py-32">
         <div className="max-w-3xl reveal">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-mint/15 text-[color:var(--mint-glow)] border border-mint/30">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold bg-mint/15 text-[color:var(--mint-glow)] border border-mint/30">
             <span className="h-1.5 w-1.5 rounded-full bg-mint animate-pulse" /> Seeking $2M Seed Round
           </span>
           <h2 className="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
@@ -545,8 +545,8 @@ function FinalCTA() {
                   <c.icon className="h-4 w-4" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <div className="text-xs uppercase tracking-widest text-white/50">{c.label}</div>
-                  <div className="text-sm font-medium text-white truncate">{c.value}</div>
+                  <div className="text-sm font-semibold uppercase tracking-widest text-white/70">{c.label}</div>
+                  <div className="text-base font-semibold text-white truncate">{c.value}</div>
                 </div>
                 <ArrowUpRight className="h-4 w-4 text-white/40 group-hover:text-white transition-colors shrink-0" />
               </div>
@@ -555,10 +555,10 @@ function FinalCTA() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3 reveal">
-          <a href="mailto:asfandbr123@gmail.com" className="px-6 py-3.5 rounded-xl font-semibold bg-mint text-midnight-deep hover:bg-mint-glow transition-colors inline-flex items-center gap-2 shadow-[0_10px_40px_-10px_var(--mint)]">
+          <a href="mailto:asfandbr123@gmail.com" className="px-6 py-3.5 rounded-xl font-bold bg-mint text-midnight-deep hover:bg-mint-glow transition-colors inline-flex items-center gap-2 shadow-[0_10px_40px_-10px_var(--mint)]">
             Request a Demo <ArrowRight className="h-4 w-4" />
           </a>
-          <a href="#" className="px-6 py-3.5 rounded-xl font-semibold text-white border border-white/20 hover:bg-white/5 transition-colors">
+          <a href="#" className="px-6 py-3.5 rounded-xl font-bold text-white border border-white/30 hover:bg-white/5 transition-colors">
             View Whitepaper
           </a>
         </div>
@@ -574,12 +574,12 @@ function Footer() {
     { h: "Resources", l: [["Whitepaper", "#contact"], ["Contact", "#contact"]] },
   ];
   return (
-    <footer className="bg-midnight-deep text-white/70">
+    <footer className="bg-midnight-deep text-white/80">
       <div className="container-x py-14">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
           <div className="col-span-2">
             <Logo light />
-            <p className="mt-4 text-sm text-white/60 max-w-xs">Borderless. Instant. Transparent.</p>
+            <p className="mt-4 text-base text-white/70 max-w-xs">Borderless. Instant. Transparent.</p>
             <div className="mt-6 flex gap-2">
               <a href="#" aria-label="LinkedIn" className="h-9 w-9 grid place-items-center rounded-lg border border-white/10 hover:border-mint/50 hover:text-[color:var(--mint)] transition-colors">
                 <Linkedin className="h-4 w-4" />
@@ -591,8 +591,8 @@ function Footer() {
           </div>
           {cols.map((c) => (
             <div key={c.h}>
-              <div className="text-sm font-semibold text-white mb-4">{c.h}</div>
-              <ul className="space-y-2.5 text-sm">
+              <div className="text-base font-bold text-white mb-4">{c.h}</div>
+              <ul className="space-y-2.5 text-base">
                 {c.l.map(([label, href]) => (
                   <li key={label}><a href={href} className="hover:text-white transition-colors">{label}</a></li>
                 ))}
@@ -600,7 +600,7 @@ function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-wrap justify-between gap-3 text-xs text-white/40">
+        <div className="mt-12 pt-6 border-t border-white/10 flex flex-wrap justify-between gap-3 text-sm font-medium text-white/60">
           <div>© {new Date().getFullYear()} NexPay. All rights reserved.</div>
           <div>Built for a borderless world.</div>
         </div>
