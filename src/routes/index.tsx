@@ -170,7 +170,7 @@ function Problem() {
             Global payments are <span className="text-[color:var(--mint)]">broken.</span>
           </h2>
           <p className="mt-5 text-lg text-muted-foreground">
-            $150T+ moves across borders each year — yet the system remains slow, expensive, and opaque.
+            $150T+ moves across borders each year, yet the system remains slow, expensive, and opaque.
           </p>
         </div>
 
@@ -347,7 +347,7 @@ function WhyNexPay() {
           <SectionEyebrow>Competitive Advantage</SectionEyebrow>
           <h2 className="mt-5 text-4xl md:text-6xl font-extrabold tracking-tight">Why NexPay</h2>
           <p className="mt-5 text-lg text-muted-foreground">
-            The universal stablecoin rail — faster, cheaper, and broader than every legacy or crypto alternative.
+            The universal stablecoin rails faster, cheaper, and broader than every legacy or crypto alternative.
           </p>
         </div>
 
@@ -436,7 +436,7 @@ function Mission() {
             </div>
             <h3 className="mt-6 text-2xl font-bold">Mission</h3>
             <p className="mt-3 text-base text-muted-foreground leading-relaxed">
-              To make cross-border money movement instant, transparent, and accessible to everyone — eliminating the friction, fees, and delays of legacy financial systems.
+              To make cross-border money movement instant, transparent, and accessible to everyone, eliminating the friction, fees, and delays of legacy financial systems.
             </p>
           </div>
           <div className="card-elevated card-elevated-hover p-8 reveal">
